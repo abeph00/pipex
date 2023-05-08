@@ -17,3 +17,8 @@ y tiene el siguiente aspecto
 
 $> ./pipex archivo1 cmd1 cmd2 archivo2
 Todos los errores como: comandos erróneos, permisos a archivos y etc, deben ser manejados.
+
+Un pipe se crea mediante el operador vertical "|". Se utiliza para conectar la salida de un proceso 
+con la entrada de otro proceso en una secuencia de comandos (shell script) o en una línea de comandos. 
+Cuando se crea un pipe, el shell establece una conexión entre el proceso emisor y el receptor, 
+lo que permite que los datos se transmitan automáticamente de un proceso a otro.
