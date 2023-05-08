@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/JaeSeoKim/badge42/main/public/badge42_logo.svg" width ="10%"/>
 <h1 align="center">
-	So long
+	Pipex
 </h1>
 
 <p align="center">
