@@ -22,5 +22,6 @@
 # include "../libft/libft.h"
 
 /*----- FUNCTION ------*/
+void	error(void);
 
 #endif
