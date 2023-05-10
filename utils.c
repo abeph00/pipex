@@ -17,3 +17,7 @@ void	error(void)
 	perror("\033[31mError");
 	exit(EXIT_FAILURE);
 }
+
+/* Takes the command and send it to find_path
+ before executing it. */
+void	execute(char *argv, char **envp)

@@ -26,6 +26,10 @@ lo que permite que los datos se transmitan automáticamente de un proceso a otro
 pid_t es un tipo de dato muy importante en programación de sistemas operativos que se utiliza para identificar procesos y comunicarse con ellos a través de diversas funciones del sistema.
 
 envp es un puntero a una matriz de cadenas que contiene las variables de entorno del sistema.
+La variable envp se pasa como argumento a la función main() en la firma estándar de C: int main(int argc, char **argv, char **envp)
+Al recibir envp en la función main(), se obtiene acceso a las variables de entorno definidas en el sistema operativo en el cual se ejecuta el programa. Esto permite al programa leer o modificar estas variables según sea necesario.
+
+El uso de la variable envp es útil cuando se necesita acceder a información específica del entorno en tiempo de ejecución, como la ruta de búsqueda (PATH), variables de configuración personalizadas o cualquier otra variable de entorno relevante para el programa.
 
 variables de entorno,
 
@@ -46,3 +50,9 @@ El proceso hijo creado por fork es una copia exacta del proceso padre, incluyend
 La función perror() toma como argumento una cadena de caracteres y escribe en la salida estándar de error (stderr) la cadena de caracteres seguida de un dos puntos, un espacio y el mensaje de error correspondiente a la última llamada al sistema que falló. El mensaje de error se obtiene a partir del valor de la variable global errno.
 
 Después de imprimir el mensaje de error, la función error llama a la función exit() para salir del programa con un código de error (EXIT_FAILURE). El código de error indica que el programa ha fallado y puede ser utilizado por el sistema operativo para identificar el tipo de error que se produjo durante la ejecución del programa.
+
+Proceso hijo y padre
+
+dup2(): int dup2(int oldfd, int newfd). En el contexto del programa pipex, la función dup2() se utiliza para redirigir la entrada o salida estándar de un proceso a través del uso de pipes. Por ejemplo, en la función child(), dup2(fd[1], STDOUT_FILENO) redirige la salida estándar del proceso hijo al extremo de escritura del pipe, mientras que dup2(filein, STDIN_FILENO) redirige la entrada estándar del proceso hijo al descriptor de archivo filein, que representa el archivo de entrada especificado en el comando.
+
+STDOUT_FILENO es una constante definida en la biblioteca de encabezados <unistd.h> en C. Representa el descriptor de archivo estándar para la salida estándar (stdout). Su valor es 1.

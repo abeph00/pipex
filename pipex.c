@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:56:57 by abertran          #+#    #+#             */
-/*   Updated: 2023/05/09 14:51:14 by abertran         ###   ########.fr       */
+/*   Updated: 2023/05/10 16:34:28 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ void	child(char **av, char **envp, int *fd)
 	filein = open(av[1], O_RDONLY, 0777);
 	if (filein == -1)
 		error();
+	dup2(fd[1], STDOUT_FILENO);
+	dup2(filein, STDOUT_FILENO);
+	close(fd[0]);
 }
 
 /* If the args and  everything works ok, runs the child and parent process */
@@ -37,7 +40,5 @@ int	main(int ac, char **av, char **envp)
 			error();
 		if (pid == 0)
 			child(av, envp, fd);
-		
-			
 	}
 }
