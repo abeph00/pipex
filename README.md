@@ -31,7 +31,6 @@ Al recibir envp en la función main(), se obtiene acceso a las variables de ento
 
 El uso de la variable envp es útil cuando se necesita acceder a información específica del entorno en tiempo de ejecución, como la ruta de búsqueda (PATH), variables de configuración personalizadas o cualquier otra variable de entorno relevante para el programa.
 
-variables de entorno,
 
 FUNCIONES
 
