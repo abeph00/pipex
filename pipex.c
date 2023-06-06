@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:56:57 by abertran          #+#    #+#             */
-/*   Updated: 2023/05/10 16:34:28 by abertran         ###   ########.fr       */
+/*   Updated: 2023/06/05 16:38:14 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	child(char **av, char **envp, int *fd)
 	if (filein == -1)
 		error();
 	dup2(fd[1], STDOUT_FILENO);
-	dup2(filein, STDOUT_FILENO);
+	dup2(filein, STDIN_FILENO);
 	close(fd[0]);
 }
 
