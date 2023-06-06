@@ -63,12 +63,10 @@ ENV -I (PIPEX)
 
 RECURSOS
 
-<li>
-https://www.rozmichelle.com/pipes-forks-dups/
-https://www.programacion.com.py/escritorio/c/pipes-en-c-linux
-https://csnotes.medium.com/pipex-tutorial-42-project-4469f5dd5901
-https://www.youtube.com/watch?v=l-UhKLdh4aY&list=PLn9-gi1mj5U5X_Aq672AziTiK4ycKDHZE&index=2
-https://www.youtube.com/watch?v=oxWxcYoJJdM
-https://www.youtube.com/watch?v=VwjP-KFuZCM
-https://www.youtube.com/watch?v=Dt9z_ohQWHI
-</li>
+<li>https://www.rozmichelle.com/pipes-forks-dups/</li>
+<li>https://www.programacion.com.py/escritorio/c/pipes-en-c-linux</li>
+<li>https://csnotes.medium.com/pipex-tutorial-42-project-4469f5dd5901</li>
+<li>https://www.youtube.com/watch?v=l-UhKLdh4aY&list=PLn9-gi1mj5U5X_Aq672AziTiK4ycKDHZE&index=2</li>
+<li>https://www.youtube.com/watch?v=oxWxcYoJJdM</li>
+<li>https://www.youtube.com/watch?v=VwjP-KFuZCM</li>
+<li>https://www.youtube.com/watch?v=Dt9z_ohQWHI</li>
