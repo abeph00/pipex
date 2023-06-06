@@ -54,7 +54,6 @@ Proceso hijo y padre
 
 dup2(): int dup2(int oldfd, int newfd). En el contexto del programa pipex, la función dup2() se utiliza para redirigir la entrada o salida estándar de un proceso a través del uso de pipes. Por ejemplo, en la función child(), dup2(fd[1], STDOUT_FILENO) redirige la salida estándar del proceso hijo al extremo de escritura del pipe, mientras que dup2(filein, STDIN_FILENO) redirige la entrada estándar del proceso hijo al descriptor de archivo filein, que representa el archivo de entrada especificado en el comando.
 
-<<<<<<< HEAD
 execv(): 
 
 STDOUT_FILENO es una constante definida en la biblioteca de encabezados <unistd.h> en C. Representa el descriptor de archivo estándar para la salida estándar (stdout). Su valor es 1.
@@ -64,6 +63,7 @@ ENV -I (PIPEX)
 
 RECURSOS
 
+<li>
 https://www.rozmichelle.com/pipes-forks-dups/
 https://www.programacion.com.py/escritorio/c/pipes-en-c-linux
 https://csnotes.medium.com/pipex-tutorial-42-project-4469f5dd5901
@@ -71,6 +71,4 @@ https://www.youtube.com/watch?v=l-UhKLdh4aY&list=PLn9-gi1mj5U5X_Aq672AziTiK4ycKD
 https://www.youtube.com/watch?v=oxWxcYoJJdM
 https://www.youtube.com/watch?v=VwjP-KFuZCM
 https://www.youtube.com/watch?v=Dt9z_ohQWHI
-=======
-STDOUT_FILENO es una constante definida en la biblioteca de encabezados <unistd.h> en C. Representa el descriptor de archivo estándar para la salida estándar (stdout). Su valor es 1.
->>>>>>> e4dc7fa2f349a8588f9c28c87e243762fb356ff7
+</li>
